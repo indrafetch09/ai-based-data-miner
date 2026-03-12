@@ -12,10 +12,13 @@ client = genai.Client(api_key=GEMINI_API_KEY)
 
 response = client.models.generate_content(
     model="gemini-3-flash-preview",
-    contents="Hi from fastapi, please introduce yourself",
+    contents="Please explain what is data mining",
 )
 
-
 @app.get("/")
-def read_root():
-    return response.text
+async def read_root():
+    return {"message": "Welcome to the AI Data Miner"}
+
+@app.get("/analyze")
+async def analyze():
+    return {"message": response.text}

@@ -2,6 +2,7 @@
 fastapi
 uvicorn[standard]
 python-multipart
+dotenv
 
 # Data Mining & Processing
 pandas
@@ -12,6 +13,5 @@ sqlalchemy
 
 # AI & NLP
 scikit-learn
-openai
 spacy
 python-dotenv
